@@ -133,7 +133,7 @@ export default function Footer() {
         </div> */}
       </div>
 
-      <div className="relative border-t border-ink/10 bg-ink">
+      <div className="relative border-t border-ink/10 bg-ink mt-5">
         <div className="eyebrow mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-6 py-5 text-[0.66rem]! text-paper/60 sm:flex-row lg:px-8">
           <p>© SWAP Windows Corp. All rights reserved.</p>
           <p>
