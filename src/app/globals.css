@@ -1,0 +1,229 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   SWAP Windows — design tokens
+   Navy + gold from the logo, on warm "architect's paper".
+------------------------------------------------------------------- */
+@theme {
+  --color-paper: #f5f1e8;
+  --color-paper-2: #ebe5d6;
+  --color-ink: #06182e;
+  --color-navy: #042851;
+  --color-navy-2: #0a3a73;
+  --color-gold: #bb8933;
+  --color-champagne: #d8c397;
+}
+
+@theme inline {
+  --font-sans: var(--f-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--f-display), ui-serif, Georgia, serif;
+  --font-mono: var(--f-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: #fff;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Small reusable pieces
+------------------------------------------------------------------- */
+@layer components {
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  /* underline that draws in from the left on hover */
+  .link-draw {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0% 1px;
+    transition: background-size 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .link-draw:hover,
+  .link-draw:focus-visible {
+    background-size: 100% 1px;
+  }
+}
+
+/* ---------- Entrance animations ---------- */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.rise {
+  animation: rise 1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: var(--d, 0ms);
+}
+
+/* scroll reveal (only hides content when JS is available) */
+@media (scripting: enabled) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition:
+      opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
+      transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition-delay: var(--d, 0ms);
+  }
+  .reveal[data-in="true"] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.card-in {
+  animation: card-in 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: var(--d, 0ms);
+}
+
+/* ---------- Marquee ---------- */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee 45s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* ---------- Rotating badge ---------- */
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spin-slow {
+  animation: spin-slow 28s linear infinite;
+}
+
+/* ---------- Services: window "sashes" that open on hover ---------- */
+.panes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.pane-img {
+  filter: saturate(0.55) brightness(0.9);
+  transition:
+    transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1),
+    filter 0.7s ease;
+}
+.pane:hover .pane-img,
+.pane:focus-within .pane-img {
+  transform: scale(1.06);
+  filter: saturate(1.05) brightness(1);
+}
+@media (min-width: 1024px) {
+  .panes {
+    flex-direction: row;
+    height: 36rem;
+  }
+  .pane {
+    flex: 1 1 0%;
+    min-width: 0;
+    transition: flex-grow 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .pane:hover,
+  .pane:focus-within {
+    flex-grow: 1.7;
+  }
+  .pane-inner {
+    min-width: 16rem;
+  }
+}
+
+/* ---------- Form fields (line style) ---------- */
+@layer components {
+  .field {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid rgb(6 24 46 / 0.25);
+    padding: 0.7rem 0;
+    font-size: 0.95rem;
+    color: var(--color-ink);
+    border-radius: 0;
+    transition: border-color 0.2s ease;
+  }
+  .field:focus {
+    outline: none;
+    border-color: var(--color-gold);
+  }
+  .field::placeholder {
+    color: rgb(6 24 46 / 0.35);
+  }
+}
+
+/* ---------- Respect reduced-motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .rise,
+  .card-in {
+    animation: none;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .marquee-track,
+  .spin-slow {
+    animation: none;
+  }
+}
