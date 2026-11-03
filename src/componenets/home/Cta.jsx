@@ -68,7 +68,7 @@ function Cta() {
               <ul className="mt-10 max-w-lg divide-y divide-white/10 border-y border-white/10">
                 <li>
                   <a href="tel:+18772127927" className="group flex items-center gap-5 py-5">
-                    <span className="grid size-12 shrink-0 place-items-center rounded-full bg-gold text-ink">
+                    <span className="grid size-12 shrink-0 place-items-center rounded-xl bg-gold text-ink">
                       <Icon d="M3 5a2 2 0 0 1 2-2h3l2 5-2.5 1.5a15 15 0 0 0 7 7L16 14l5 2v3a2 2 0 0 1-2 2C10 21 3 14 3 5Z" />
                     </span>
                     <span>
@@ -81,7 +81,7 @@ function Cta() {
                 </li>
                 <li>
                   <a href="mailto:SWAP@swapwindows.com" className="group flex items-center gap-5 py-5">
-                    <span className="grid size-12 shrink-0 place-items-center rounded-full border border-white/25 text-champagne transition-colors group-hover:bg-gold group-hover:text-ink">
+                    <span className="grid size-12 shrink-0 place-items-center rounded-xl border border-white/25 text-champagne transition-colors group-hover:bg-gold group-hover:text-ink">
                       <Icon d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6Zm0 1 9 6 9-6" />
                     </span>
                     <span>
@@ -104,7 +104,7 @@ function Cta() {
 
               {sent ? (
                 <div className="py-10 text-center">
-                  <span className="mx-auto grid size-16 place-items-center rounded-full bg-gold text-ink">
+                  <span className="mx-auto grid size-16 place-items-center rounded-xl bg-gold text-ink">
                     <Icon d="m5 12 5 5 9-10" className="size-7" />
                   </span>
                   <h3 className="mt-6 text-4xl text-navy">Thank you.</h3>
@@ -216,10 +216,10 @@ function Cta() {
 
                     <button
                       type="submit"
-                      className="group flex w-full items-center justify-between rounded-full bg-navy py-2.5 pr-2.5 pl-7 text-sm font-bold text-paper transition-colors duration-300 hover:bg-ink"
+                      className="group flex w-full items-center justify-between rounded-xl bg-navy py-2.5 pr-2.5 pl-7 text-sm font-bold text-paper transition-colors duration-300 hover:bg-ink"
                     >
                       Send Message
-                      <span className="grid size-11 place-items-center rounded-full bg-gold text-ink transition-transform duration-300 group-hover:rotate-[-45deg]">
+                      <span className="grid size-11 place-items-center rounded-xl bg-gold text-ink transition-transform duration-300 group-hover:rotate-[-45deg]">
                         <Icon d="M5 12h14m-6-6 6 6-6 6" />
                       </span>
                     </button>

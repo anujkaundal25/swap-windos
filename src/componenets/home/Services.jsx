@@ -113,7 +113,7 @@ function Services() {
 
                 <div className="pane-inner flex h-full min-h-[26rem] flex-col justify-between p-7">
                   <div className="flex items-start justify-between">
-                    <span className="grid size-14 place-items-center rounded-full border border-white/25 text-champagne backdrop-blur-sm transition-colors duration-300 group-hover:border-gold group-hover:bg-gold group-hover:text-ink">
+                    <span className="grid size-14 place-items-center rounded-xl border border-white/25 text-champagne backdrop-blur-sm transition-colors duration-300 group-hover:border-gold group-hover:bg-gold group-hover:text-ink">
                       {service.icon}
                     </span>
                     <span className="font-display text-5xl leading-none text-white/35 transition-colors duration-300 group-hover:text-champagne">

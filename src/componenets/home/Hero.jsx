@@ -49,7 +49,7 @@ function Hero() {
             className="rise mt-6 text-[clamp(2.9rem,7.4vw,6.4rem)] leading-[0.95] text-balance"
             style={{ "--d": "150ms" }}
           >
-            Four materials. <em className="text-champagne">One window</em> to everything you build.
+            Four materials. <em className="text-[#bb8933]">One window</em> to everything you build.
           </h1>
 
           <p
@@ -63,16 +63,16 @@ function Hero() {
           <div className="rise mt-10 flex flex-col gap-4 sm:flex-row" style={{ "--d": "420ms" }}>
             <a
               href="#products"
-              className="group inline-flex items-center justify-center gap-3 rounded-full bg-gold py-3 pr-3 pl-7 text-sm font-bold text-ink transition-colors duration-300 hover:bg-champagne"
+              className="group inline-flex items-center justify-center gap-3 rounded-xl bg-gold py-3 pr-3 pl-7 text-sm font-bold text-ink transition-colors duration-300 hover:bg-champagne"
             >
               Explore Products
-              <span className="grid size-9 place-items-center rounded-full bg-ink text-champagne transition-transform duration-300 group-hover:translate-x-0.5">
+              <span className="grid size-9 place-items-center rounded-xl bg-ink text-champagne transition-transform duration-300 group-hover:translate-x-0.5">
                 <Arrow className="size-4" />
               </span>
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center justify-center rounded-full border border-white/30 px-7 py-3.5 text-sm font-semibold text-paper backdrop-blur-sm transition-colors duration-300 hover:border-champagne hover:text-champagne"
+              className="inline-flex items-center justify-center rounded-xl border border-white/30 px-7 py-3.5 text-sm font-semibold text-paper backdrop-blur-sm transition-colors duration-300 hover:border-champagne hover:text-champagne"
             >
               Get in Touch
             </a>

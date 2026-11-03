@@ -80,7 +80,7 @@ function Projects() {
                     role="tab"
                     aria-selected={isActive}
                     onClick={() => setActiveCategory(category)}
-                    className={`eyebrow inline-flex items-center gap-2 rounded-full border px-4 py-2.5 text-[0.68rem]! transition-all duration-300 ${
+                    className={`eyebrow inline-flex items-center gap-2 rounded-xl border px-4 py-2.5 text-[0.68rem]! transition-all duration-300 ${
                       isActive
                         ? "border-navy bg-navy text-paper"
                         : "border-ink/20 text-ink/70 hover:border-navy hover:text-navy"
@@ -114,7 +114,7 @@ function Projects() {
               <div className="absolute inset-0 bg-linear-to-t from-ink/90 via-ink/15 to-transparent" />
 
               {/* window-frame outline on hover */}
-              <div className="pointer-events-none absolute inset-4 border border-white/0 transition-all duration-500 group-hover:inset-3 group-hover:border-white/60" />
+              <div className="pointer-events-none absolute inset-4 border border-white/0 transition-all duration-500 group-hover:inset-3 group-hover:border-[#bb8933]" />
 
               {/* <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-6 text-paper">
                 <div>
@@ -127,7 +127,7 @@ function Projects() {
                 <a
                   href="#contact"
                   aria-label={`View ${project.title}`}
-                  className="grid size-11 shrink-0 place-items-center rounded-full bg-gold text-ink transition-all duration-300 group-hover:rotate-[-45deg] group-hover:bg-champagne"
+                  className="grid size-11 shrink-0 place-items-center rounded-xl bg-gold text-ink transition-all duration-300 group-hover:rotate-[-45deg] group-hover:bg-champagne"
                 >
                   <svg aria-hidden="true" className="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M5 12h14m-6-6 6 6-6 6" />

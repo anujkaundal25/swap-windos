@@ -85,10 +85,10 @@ function Header() {
           {/* CTA */}
           <a
             href="#contact"
-            className="group hidden items-center gap-3 rounded-full bg-navy py-2.5 pr-2.5 pl-6 text-[0.82rem] font-semibold text-paper transition-colors duration-300 hover:bg-ink lg:inline-flex"
+            className="group hidden items-center gap-3 rounded-xl bg-navy py-2.5 pr-2.5 pl-6 text-[0.82rem] font-semibold text-paper transition-colors duration-300 hover:bg-ink lg:inline-flex"
           >
             Get a Quote
-            <span className="grid size-8 place-items-center rounded-full bg-gold text-ink transition-transform duration-300 group-hover:rotate-[-45deg]">
+            <span className="grid size-8 place-items-center rounded-xl bg-gold text-ink transition-transform duration-300 group-hover:rotate-[-45deg]">
               <Arrow className="size-4" />
             </span>
           </a>
@@ -99,7 +99,7 @@ function Header() {
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
-            className="relative z-[60] grid size-11 place-items-center rounded-full border border-ink/15 lg:hidden"
+            className="relative z-[60] grid size-11 place-items-center rounded-xl border border-ink/15 lg:hidden"
           >
             <span className="relative block h-3 w-5">
               <span
@@ -149,7 +149,7 @@ function Header() {
         <a
           href="#contact"
           onClick={() => setOpen(false)}
-          className="mt-6 flex items-center justify-center gap-3 rounded-full bg-gold py-4 text-sm font-bold text-ink"
+          className="mt-6 flex items-center justify-center gap-3 rounded-xl bg-gold py-4 text-sm font-bold text-ink"
         >
           Get a Quote <Arrow className="size-4" />
         </a>

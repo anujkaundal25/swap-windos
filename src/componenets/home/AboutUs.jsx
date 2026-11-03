@@ -64,10 +64,10 @@ function AboutUs() {
               <div className="mt-10 flex flex-wrap items-center gap-x-12 gap-y-8">
                 <a
                   href="#learn-more"
-                  className="group inline-flex items-center gap-3 rounded-full bg-navy py-2.5 pr-2.5 pl-6 text-sm font-semibold text-paper transition-colors duration-300 hover:bg-ink"
+                  className="group inline-flex items-center gap-3 rounded-xl bg-navy py-2.5 pr-2.5 pl-6 text-sm font-semibold text-paper transition-colors duration-300 hover:bg-ink"
                 >
                   Learn More About Us
-                  <span className="grid size-9 place-items-center rounded-full bg-gold text-ink transition-transform duration-300 group-hover:rotate-[-45deg]">
+                  <span className="grid size-9 place-items-center rounded-xl bg-gold text-ink transition-transform duration-300 group-hover:rotate-[-45deg]">
                     <svg aria-hidden="true" className="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M5 12h14m-6-6 6 6-6 6" />
                     </svg>
